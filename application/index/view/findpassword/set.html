@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>手机设置密码</title>
+    {load file='__fontawesome__/css/font-awesome.min.css'}
+    {load file='__layui__/css/layui.css'}
+    {load file='__layui__/layui.js'}
+    {load file='__css__/currency.css'}
+    {load file='__css__/register.css'}
+    {load file='__js__/jquery-1.8.3.min.js'}
+</head>
+<body class="bodyBg">
+{include file="public/register_header" /}
+<!--top end -->
+<div class="layui-container">
+    <!--content begin-->
+    <div class="layui-row ">
+        <!--left begin -->
+        <div class="RegisterUser mrt20 layui-col-sm12 layui-col-md12 layui-col-lg12">
+            <div class="RegisterUser-login User-findpassword">
+                <div class="layui-row layui-col-space30">
+                <div class="RegisterUser-login-left left layui-form-pane layui-col-sm12 layui-col-md12 layui-col-lg12">
+                    <div class="RegisterUser-tabRL">
+                        <h2>手机找回密码</h2>
+                    </div>
+                    <div class="layui-form-item">
+                            <label class="layui-form-label">手机号</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="regMobile" id="regMobile" value="{$isPhoneSet}" disabled autocomplete="off" class="layui-input layui-btn-disabled">
+                            </div>
+                        </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">重设密码</label>
+                        <div class="layui-input-block">
+                            <input type="password" name="regPassword" id="regPassword"  placeholder="请设置新的密码" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">确认密码</label>
+                        <div class="layui-input-block">
+                            <input type="password" name="restPassword" id="restPassword"  placeholder="请确认新的密码" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item p-a">
+                        <div class="layui-form-mid right"><p><a class="p" href="{:url('/index/Login/user');}">账号登录</a></p> </div>
+
+                    </div>
+
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button class="layui-btn layui-btn-normal" lay-submit lay-filter="formDemo" onclick="checkPasswordSet()">确定</button>
+                            </div>
+                        </div>
+                </div>
+
+            </div>
+            </div>
+        </div>
+        <!--content end -->
+    </div>
+</div>
+<script>
+    function checkPasswordSet(){
+        var mobile = $('#regMobile').val();
+        var regPassword = $('#regPassword').val();
+        var restPassword = $('#restPassword').val();
+        var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+
+        if(mobile == '' || mobile.length!=11 || !myreg.test(mobile)){
+            layer.msg('请输入有效的手机号码！'); //alert('用户名或密码不能为空');
+            return;
+        }
+        if(regPassword =='' || restPassword==''){
+            layer.msg('密码不能为空!');
+            return;
+        }
+        if(regPassword != restPassword){
+            layer.msg('两次密码不一致!');
+            return;
+        }
+
+        $.ajax({
+            url:'/index/findpassword/SetDo&id='+Math.random(),
+            type:'post',
+            dataType:'json',
+            data:{regMobile:$("#regMobile").val(),regPassword:$("#regPassword").val(),restPassword:$("#restPassword").val()},
+            success:function(res){
+                if(res.status==1){
+                    layer.alert(res.msg, {icon: 1,btn: ['确定'],yes: function(index, layero){
+                        top.location.href = res.Turl;
+                    }});
+                }else{
+                    layer.alert(res.msg, {icon: 2});
+                }
+            },
+            error : function(XMLHttpRequest, textStatus, errorThrown) {
+                layer.alert('网络失败，请刷新页面后重试', {icon: 2});
+            }
+        })
+    }
+    $(".clickCode").on("click", function() {
+        var mobile = $('#regMobile').val();
+        var vertify = $('#imgVerifycode').val();
+        var s = parseInt($(".clickCode i").html());
+        if( mobile == ''){
+            layer.alert('请输入有效的手机号！', {icon: 2});
+            return;
+        }
+        if(vertify =='' || vertify.length!=3){
+            layer.alert('请输入正确的图形验证码！', {icon: 2});
+            return;
+        }
+        if (s > 0) {
+            return false;
+        }
+        $.post("{:url('/index/Login/loginSms');}", {
+            regMobile: mobile
+        }, function(e) {
+            if (e.status == 1) {
+                layer.msg(e.msg);
+                $(".clickCode").html("<p class=' layui-btn-disabled'><i>60</i>秒后重发</p>");
+                var ping = window.setInterval(function() {
+                    var s = parseInt($(".clickCode i").html());
+                    if (s == 0) {
+                        $(".clickCode").html("重发验证码")
+                        clearInterval(ping);
+                        return false;
+                    } else {
+                        $(".clickCode i").html(s - 1);
+                    }
+                }, 1000);
+            } else {
+                layer.msg(e.msg);
+            }
+        });
+        return false;
+    });
+    layui.use('form', function(){
+        var form = layui.form;
+
+        //各种基于事件的操作，下面会有进一步介绍
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>手机找回密码</title>
+    {load file='__fontawesome__/css/font-awesome.min.css'}
+    {load file='__layui__/css/layui.css'}
+    {load file='__layui__/layui.js'}
+    {load file='__css__/currency.css'}
+    {load file='__css__/register.css'}
+    {load file='__js__/jquery-1.8.3.min.js'}
+</head>
+<body class="bodyBg">
+{include file="public/register_header" /}
+<!--top end -->
+<div class="layui-container">
+    <!--content begin-->
+    <div class="layui-row ">
+        <!--left begin -->
+        <div class="RegisterUser mrt20 layui-col-sm12 layui-col-md12 layui-col-lg12">
+            <div class="RegisterUser-login User-findpassword">
+                <div class="layui-row layui-col-space30">
+                <div class="RegisterUser-login-left left layui-form-pane layui-col-sm12 layui-col-md12 layui-col-lg12">
+                    <div class="RegisterUser-tabRL">
+                        <h2>手机找回密码</h2>
+                    </div>
+                    <input type="hidden" name="controller" id="controller" value="{$controller}" />
+                    <div class="layui-form-item">
+                            <label class="layui-form-label">手机号</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="regMobile" id="regMobile"  placeholder="请输入手机号" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label imgVerify clickHand" ><img id="imgVerify" src="{:captcha_src()}" title="点击刷新" onclick="fleshVerify()"></label>
+                        <div class="layui-input-block">
+                            <input type="text" name="imgVerifycode" id="imgVerifycode"  placeholder="请输入验证码,点击可刷新" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item p-a">
+                        <label class="layui-form-label clickHand clickCode">获取验证码</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="regmCode" id="regmCode"  placeholder="请输入手机验证码" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item p-a">
+                        <div class="layui-form-mid right"><p><a class="p" href="{:url('/index/Login/user');}">账号登录</a></p> </div>
+
+                    </div>
+
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button class="layui-btn layui-btn-normal" lay-submit lay-filter="formDemo" onclick="checkMobileLogin()">下一步</button>
+                            </div>
+                        </div>
+                </div>
+
+            </div>
+            </div>
+        </div>
+        <!--content end -->
+    </div>
+</div>
+<script>
+    function fleshVerify(){
+        //重载验证码
+        $('#imgVerify').attr('src','{:captcha_src()}&r='+Math.floor(Math.random()*100));
+    }
+    function checkMobileLogin(){
+        var mobile = $('#regMobile').val();
+        var vertify = $('#imgVerifycode').val();
+        var regmCode = $('#regmCode').val();
+        var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+        if( mobile == ''){
+            layer.msg('手机号不能为空!'); //alert('用户名或密码不能为空');
+            return;
+        }
+        if( mobile.length!=11 || !myreg.test(mobile)){
+            layer.msg('请输入有效的手机号码！'); //alert('用户名或密码不能为空');
+            return;
+        }
+        if(vertify =='' || vertify.length!=3){
+            layer.msg('图形验证码不能为空!');
+            return;
+        }
+        if(regmCode =='' || regmCode.length!=6){
+            layer.msg('请输入有效的手机验证码!');
+            return;
+        }
+        $.ajax({
+            url:'/index/Findpassword/passwordDo&id='+Math.random(),
+            type:'post',
+            dataType:'json',
+            data:{regMobile:$("#regMobile").val(),regmCode:$("#regmCode").val(),imgVerifycode:$("#imgVerifycode").val()},
+            success:function(res){
+                if(res.status==1){
+                    top.location.href = res.Turl;
+                }else{
+                    layer.alert(res.msg, {icon: 2});
+                }
+            },
+            error : function(XMLHttpRequest, textStatus, errorThrown) {
+                layer.alert('网络失败，请刷新页面后重试', {icon: 2});
+            }
+        })
+    }
+    $(".clickCode").on("click", function() {
+        var mobile = $('#regMobile').val();
+        var vertify = $('#imgVerifycode').val();
+        var controller = $('#controller').val();
+        var s = parseInt($(".clickCode i").html());
+        if( mobile == ''){
+            layer.msg('请输入有效的手机号！');
+            return;
+        }
+        if(vertify =='' || vertify.length!=3){
+            layer.msg('请输入正确的图形验证码！');
+            return;
+        }
+        if (s > 0) {
+            return false;
+        }
+        $.post("{:url('/index/sms/sendSms');}", {
+            regMobile: mobile,
+            controller:controller
+        }, function(e) {
+            if (e.status == 1) {
+                layer.msg(e.msg);
+                $(".clickCode").html("<p class=' layui-btn-disabled'><i>60</i>秒后重发</p>");
+                var ping = window.setInterval(function() {
+                    var s = parseInt($(".clickCode i").html());
+                    if (s == 0) {
+                        $(".clickCode").html("重发验证码")
+                        clearInterval(ping);
+                        return false;
+                    } else {
+                        $(".clickCode i").html(s - 1);
+                    }
+                }, 1000);
+            } else {
+                layer.msg(e.msg);
+            }
+        });
+        return false;
+    });
+    layui.use('form', function(){
+        var form = layui.form;
+
+        //各种基于事件的操作，下面会有进一步介绍
+    });
+</script>
+</body>
+</html>

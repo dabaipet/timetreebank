@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>医院注册</title>
+    {load file='__bootstrap__/css/bootstrap.min.css'}
+    {load file='__bootstrap__/css/bootstrap.min.css'}
+    {load file='__css__/register.css'}
+    {load file='__fontawesome__/css/font-awesome.min.css'}
+</head>
+<body>
+<!--top begin-->
+<div class="container-fluid">
+    <div class="row RegisterDoctorInfo">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <a href="" class="logo" id="logo" title="大白宠物医院"></a>
+            <p class="logo-text">
+                <span>数百万宠粉社区</span>
+                <span class="bor-l-r"><b>3000</b>+认证医生</span>
+                <span class="last">每日<b>500</b>+求助提问</span>
+            </p>
+            <a href="//www.yuemei.com/" class="return-home">返回大白主页</a>
+        </div>
+    </div>
+</div>
+<!--top end -->
+
+<div class="container">
+    <!--content begin-->
+    <div class="row ">
+        <!--left begin -->
+        <div class="RegisterDoctorLeft col-sm-9 col-md-9 col-lg-9">
+
+            <div class="tit"><i class="icon-edit"></i>医生注册</div>
+            <div class="top">
+                <img class="top-img" alt="" src="//icon.yuemei.com/front/doc_v1/images/top-img.png" id="photo_img">
+
+                <div class="img-right">
+                    <div class="upload-top">
+                        <div class="upload-img">
+                            <p>上传头像</p>
+                        </div>
+                    </div>
+                    <div class="img-msg">请使用真实头像，且不带宣传字样(宽高最少300，比例最好是1:1)</div>
+                </div>
+            </div>
+            <form action="" method="post" id="doctor_form">
+                <ul class="form-list">
+                    <li>
+                        <p class="init-name">医生姓名</p>
+                        <div class="input-box">
+                            <input class="register-input" id="username" name="username" maxlength="50" value="" type="text">
+                        </div>
+                        <div class="reg-msg"><i></i><span></span></div>
+                    </li>
+                    <li>
+                        <p class="init-name">性别</p>
+                        <div class="input-box">
+                            <div class="radio-box radio-checked">
+                                <input id="AuthInfo_sex_0" value="1" checked="checked" name="sex" type="radio">
+
+                            </div>
+                            <div class="radio-box">
+                                <input class="rad" id="AuthInfo_sex_1" value="2" name="sex" type="radio">
+
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="init-name">医院名称</p>
+                        <div class="input-box">
+                            <input class="register-input ac_input" id="hospital" name="hospitalName" maxlength="100" value="" autocomplete="off" type="text">
+                        </div>
+                        <div class="reg-msg"><i></i><span></span></div>
+                    </li>
+                    <li>
+                        <p class="init-name">执业医师证号</p>
+                        <div class="input-box">
+                            <input class="register-input" id="number" name="number" maxlength="50" value="" type="text">
+                        </div>
+                        <div class="reg-msg"><i></i><span></span></div>
+                    </li>
+                    <li>
+                        <p class="init-name">执业医师证照片</p>
+                        <div class="input-box">
+                            <input value="从电脑里选择" class="take-photo" id="certificate" type="button">
+                        </div>
+                        <div class="reg-msg"><i></i><span></span></div>
+
+                    </li>
+                    <li>
+                        <p class="init-name">电子邮箱</p>
+                        <div class="input-box">
+                            <input class="register-input" id="email" name="email" value="" type="text">
+                        </div>
+                        <div class="reg-msg"><i></i><span></span></div>
+                    </li>
+                    <li>
+                        <p class="init-name">手机号码</p>
+                        <div class="input-box">
+                            <input class="register-input" id="mobile" name="mobile" value=""  type="text">
+                        </div>
+                        <div class="reg-msg"><i></i><span></span></div>
+                    </li>
+                    <li>
+                        <p class="init-name">图形验证码</p>
+                        <div class="input-box img-code-box">
+                            <input name="img-code" class="reset-code" id="codeImg" type="text">
+                            <img src="//user.yuemei.com/user/getCaptcha?m=1504839681" class="code-img">
+                        </div>
+                        <div class="reg-msg"><i></i><span></span></div>
+                    </li>
+                    <li>
+                        <p class="init-name">验证码</p>
+                        <div class="input-box code-box">
+                            <input class="code-input" id="vCode" name="code" maxlength="6" type="text">
+                            <input class="get-code" value="获取随机码" type="button">
+                        </div>
+                        <div class="reg-msg"><i></i><span></span></div>
+                    </li>
+                </ul>
+                <input class="register-btn" name="" value="立即注册" type="button">
+            </form>
+
+        </div>
+        <!--right begin -->
+        <div class="RegisterDoctorRight col-sm-3 col-md-3 col-lg-3">
+
+            <div class="register-step">
+                <p class="step-num"></p>
+                <ul>
+                    <li class="num1">
+                        <i></i><p>提交资料</p>
+                    </li>
+                    <li class="num2">
+                        <i></i><p>大白审核</p>
+                    </li>
+                    <li class="num3">
+                        <i></i><p>短信通知</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="help-tit">注册中遇到任何问题可联系我们</div>
+            <ul class="help-list">
+                <li><i class="icon-phone-sign"></i>010-88894928-6154</li>
+                <li><i class=" icon-envelope"></i>yunying@yuemei.com</li>
+            </ul>
+
+
+        </div>
+    </div>
+    <!--content end -->
+</div>
+
+
+
+</body>
+</html>

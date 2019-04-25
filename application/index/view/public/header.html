@@ -1,0 +1,27 @@
+<!-- 适用手机、平板、大桌面显示器-->
+<div class="layui-fluid index-t-width">
+    <div class="layui-container">
+        <div class="layui-row top-nav">
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md6 "><a href="{:url('/index');}"><i class="fa fa-home" aria-hidden="true"></i>首页</a><a href=""><i class="fa fa-weixin" aria-hidden="true"></i>爱宠医院网微信号</a> </div>
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md6 text-right"><a href="{:url('/index/Register/hospital');}"><i class="fa fa-hospital-o" aria-hidden="true"></i>医院入驻</a><a href="{:url('/index/Register/doctor');}"><i class="fa fa-user-md" aria-hidden="true"></i>医生注册</a><a href="{:url('/index/Register/user');}"><i class="fa fa-user-circle-o" aria-hidden="true"></i>用户注册</a><a href="{:url('/index/login/user');}"><i class="fa fa-sign-in" aria-hidden="true"></i>登陆</a></div>
+        </div>              
+    </div>
+</div><!--index-t end-->
+<div class="layui-container">
+    <div class="layui-row index-header">
+        <div class="layui-col-xs4 layui-col-sm4 layui-col-md4  index-logo"><h1><a href="" title="爱宠医院网"></a></h1></div>
+        <div class="layui-col-xs4 layui-col-sm4 layui-col-md4  index-form">
+            <form class="layui-form"  action="">
+			<div class="layui-row layui-col-space5">
+					<div class="layui-col-xs10 layui-col-sm10 layui-col-md10">
+                    <input type="text" required  lay-verify="required" class="layui-input" placeholder="请输入疾病名、医院或医生名">
+					</div>
+				   <div class="layui-col-xs2 layui-col-sm2 layui-col-md2">
+                    <button class="layui-btn layui-btn-normal" lay-submit lay-filter="formDemo">搜索</button>
+                    </div>
+			</div>
+            </form>
+                </div>
+        </div>
+        <div class="layui-col-xs4 layui-col-sm4 layui-col-md4"></div>
+    </div>
