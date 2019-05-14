@@ -35,6 +35,15 @@ return [
     'tpl_replace_string'  =>  [
         '__STATIC__'=>'/static',
         '__PURPLEADMIN__' => '/static/PurpleAdmin/',
+        '__root__' => '/',
+        '__bootstrap__' => '/static/bootstrap-3.3.5',
+        '__JS__' => '/static/js',
+        '__layer__' => '/static/layer',
+        '__layui__' => '/static/layui',
+        '__fontawesome__' => '/static/FontAwesome',
+        '__admin__' => '/static/admin',
+        '__assets__' => '/static/admin/assets',
     ]
+
 
 ];

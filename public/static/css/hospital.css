@@ -1,0 +1,226 @@
+@charset "UTF-8";
+
+/*医院详情信息STYLE*/
+.white {
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+}
+.chanl-head {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+
+}
+.chanl-head img {
+    display: block;
+    margin-top: 10px;
+    margin-right: 50px;
+}
+
+.chanl-head a, .chanl-head span {
+    display: block;
+    height: 12px;
+    margin-top: 14px;
+    padding: 0 11px;
+    line-height: 12px;
+}
+
+.chanl-head .flleft {
+    overflow: hidden;
+}
+.chanl-head li {
+    margin-right: -1px;
+    float: left;
+}
+.chanl-head .logo {
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: medium none;
+}
+.white a {
+    border-right: 1px solid #f1f1f1;
+}
+.chanl-head .flright {
+    overflow: visible;
+}
+.noin .hos-in {
+    background-position: 0 0;
+}
+.noin a {
+    position: relative;
+    height: 16px;
+    margin-top: 10px;
+    line-height: 16px;
+    border: none;
+    padding-left: 15px;
+
+}
+.noin i{
+    padding-right: 5px;
+}
+/*hospitalpital info img*/
+.hospitalNav{
+    position: relative;
+    z-index: 1;
+    clear: both;
+}
+.hospitalInfoImg {
+    position: relative;
+    z-index: 1;
+    clear: both;
+    height: 164px;
+    background: url('../images/head-bj.jpg') no-repeat top center;
+}
+.hospitalInfohead .hospitalInfomain {
+    position: relative;
+    height: 120px;
+    padding: 22px 0;
+    color: #fff;
+}
+.hospitalInfomain .hospital-img {
+    margin-right: 30px;
+    border: 4px solid #6c6a69;
+}
+.hospitalInfomain .hospital-img, .hospitalInfomain .hospital-img img {
+    display: block;
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+}
+.hospitalInfomain .hospitalInfoDate {
+    width: 770px;
+    height: 142px;
+
+}
+.hospitalInfomain .hospitalInfoDate .hospitalInfoName {
+    height: 20px;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+}
+.hospitalInfoDate .hover-data {
+    height: 70px;
+
+}
+.hospitalInfoDate .data-text {
+    margin-top: 9px;
+    font-size: 13px;
+    line-height: 20px;
+}
+.hospitalInfoDate .data-lv {
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 14px;
+}
+.hospitalInfoDate .data-lv span {
+    position: relative;
+}
+.hospitalInfoDate .data-lv i {
+    padding: 0 20px 0 5px;
+    color: #ff8135;
+}
+.hospitalInfoDate .feedback-box {
+    font-size: 13px;
+    line-height: 20px;
+    color: #fff;
+}
+.hospitalInfoDate .feedback-box .feedback-text {
+    color: #ffac38;
+}
+.hospitalBtn {
+    position: absolute;
+    right: 0;
+    top: 22px;
+    height: 36px;
+    margin-top: 40px;
+}
+.hospitalBtn .zixun-btn {
+    color: #fff;
+    background: #ffac38;
+}
+.hospitalBtn .btn-link {
+    display: block;
+    float: right;
+    height: 36px;
+    margin-left: 12px;
+    padding: 0 28px;
+    font-size: 14px;
+    line-height: 36px;
+    border-radius: 18px;
+}
+.hospitalBtn .yuyue-btn,  .hospitalBtn .weixin-btn {
+    color: #ffac38;
+    background: #fff;
+}
+.hospitalBtn .zixun-btn span {
+    position: relative;
+    display: inline-block;
+    padding-left: 20px;
+    vertical-align: top;
+}
+
+.hospitalBtn .zixun-btn i {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 16px;
+    height: 17px;
+    margin-top: -8px;
+    background: url('../images/zixun.gif') no-repeat -18px -18px;
+}
+.hospitalMicNav{
+    clear: both;
+    height: 37px;
+    padding-top: 20px;
+    border-bottom: 1px solid #e8e8e8;
+    background: #fff;
+    position: relative;
+}
+.hospitalMicNav ul {
+    overflow: hidden;
+    height: 38px;
+    margin: 0 auto ;
+}
+.hospitalMicNav li {
+    float: left;
+    min-width: 157px;
+    height: 18px;
+    margin-left: -1px;
+    line-height: 18px;
+    text-align: center;
+    border-left: 1px solid #ddd;}
+.hospitalMicNav .now {
+    border-bottom: 2px solid #ff5370;
+}
+.hospitalMicNav a:hover, .nav-wrap .now {
+    color: #ff5370;
+}
+.hospitalMicNav a {
+    display: block;
+    min-width: 98px;
+    height: 18px;
+    margin: 0 auto;
+    padding-bottom: 18px;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

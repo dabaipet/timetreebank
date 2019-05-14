@@ -1,0 +1,304 @@
+@charset "UTF-8";
+/*
+*大白宠物医院 项目 医院 医生 样式
+*/
+.clearfix {
+    zoom: 1;
+}
+.H-select {
+    border: 1px solid #e8e8e8;
+    overflow: visible;
+    border-top: none;
+}
+.H-select .pageTab {
+    border: 1px solid #e8e8e8;
+    height: 39px;
+    clear: both;
+}
+.H-select .list-ico{
+    line-height: 39px;
+    padding: 0px 30px;
+    float: left;
+    border-right: 1px solid #e8e8e8;
+}
+.now{
+    color:#377bee;
+}
+.H-select .list-ico .icoico{
+    line-height: 39px;
+    float: left;
+
+}
+.H-select .pageTab a {
+    display: block;
+    float: left;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #666;
+}
+.selsect-item {
+    line-height: 26px;
+    clear: both;
+    padding: 0 0 0 20px;
+}
+.selsect-item .item-cont {
+    width: 100%;
+    overflow: hidden;
+}
+.selsect-item .item-cont dt{
+    font-weight: normal;
+    width: 45px;
+    padding-top: 1px;
+    text-align: left;
+}
+.H-select .item-tit {
+    float: left;
+    border-right: 1px solid #fff;
+    color: #a1a1a1;
+   
+}
+
+
+.H-select .item-links a:hover, .H-select .item-links a.now, .H-select .now a {
+    color: #377bee;
+}
+.H-select .eachLink {
+    overflow: hidden;
+    width: 1040px;
+}
+.leftA span {
+    display: block;
+    float: left;
+    padding-bottom: 0;
+    position: relative;
+    border: 1px solid #fff;
+    border-color: transparent;
+}
+.H-select .item-links a, .leftA span.no-click {
+    color: #333;
+    padding: 3px 18px;
+    border-radius: 2px;
+    white-space: nowrap;
+}
+.item-cont .eachLink .greyBg {
+    border: none;
+    overflow: hidden;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background: #f8f8f8;
+    float: left;
+}
+.mTop7 {
+    margin-top: 7px;
+}
+.classCont {
+    float: left;
+    width: 930px;
+}
+
+/*找医院 content*/
+.H-wrap{
+    border: 1px solid #e8e8e8;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: rgb(232, 232, 232);
+
+}
+.wrap-left{
+    padding-left: 0px;
+}
+.HList {
+    padding: 0 0 0 20px;
+    border-right: 1px solid #e8e8e8;
+    border-top: none;
+}
+.HList dl {
+    overflow: hidden;
+}
+.docList dl, .HList dl {
+    padding: 20px 0 15px;
+    border-bottom: 1px solid #f3f3f3;
+}
+.hos-info {
+    overflow: visible;
+    height: 120px;
+}
+
+.Hlistimg, .Hlistimg img {
+    float: left;
+    margin-right: 20px;
+    display: block;
+    width: 120px;
+    height: 120px;
+}
+.Hlistrelated {
+    float: left;
+    width: 390px;
+}
+.Hlistrelated .item1 {
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+.Hlistrelated > span {
+    display: block;
+}
+/*.Hlistrelated div.item2 {
+    height: 17px;
+}*/
+.Hlistrelated .item2 {
+    padding-top: 9px;
+}
+
+.item2 .inline {
+    float: left;
+}
+.item2 .inline i , .item2 .inline {
+    color: #999;
+    font-style: normal;
+}
+.Hlistrelated .item2 b {
+    color: #666;
+    font-weight: normal;
+    padding-right: 10px;
+}
+.Hlistauth {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 179px;
+}
+
+.Hlistauth > span {
+    border: 1px solid #fdedd8;
+    top: -1px;
+    display: inline-block;
+    padding: 2px 4px;
+    color: #f99a1e;
+    height: 22px;
+}
+.Hlistrelated .item3 {
+    display: inline-block;
+    border: 1px solid #e8e8e8;
+    padding: 0 10px;
+    line-height: 22px;
+    color: #666;
+    margin-top: 19px;
+}
+.Hlistrelated .item3:hover {
+    color: #377bee; border-color: #377bee;
+}
+.Hlistcase .left {
+    border-right: 1px solid #f3f3f3;
+    padding-right: 25px;
+    margin-right: 25px;
+}
+
+.Hlistcase .levNum {
+    font-size: 16px;
+    color: #999;
+}
+.Hlistcase .levNum em {
+    font-size: 22px;
+    color: #FF0036;
+}
+.Hlistcase .left p {
+    position: relative;
+    left: -6px;
+    margin: 5px 0 17px;
+}
+.Hlistcase .levbox {
+    position: relative;
+    top: 2px;
+    margin-left: 5px;
+    display: inline-block;
+    overflow: hidden;
+    height: 15px;
+    width: 81px;
+    background: #d7d7d7;
+}
+.Hlistcase.right .levbox i {
+    background-position: 0 -1114px;
+}
+.levbox b {
+    background: #ffc000;
+    z-index: 1;
+}
+.Hlistcase .left a {
+    color: #999;
+}
+.Hlistcase .right span {
+    display: block;
+    line-height: 23px;
+    color: #999;
+}
+.Hlistcase .right i {
+    display: inline-block;
+    position: relative;
+    letter-spacing:10px;
+}
+.doc-serv {
+    padding-top: 25px;
+}
+.doc-serv p {
+    line-height: 30px;
+    background: #f9f9f9;
+    color: #999;
+    overflow: hidden;
+}
+.doc-serv.hos-serv p .item1 {
+    border-color: #6fb1e8;
+    width: 500px;
+}
+.doc-serv p .item1 {
+    border-left: 4px solid #36ccca;
+    border-left-color: rgb(54, 204, 202);
+    width: 532px;
+    color: #666;
+    text-indent: 15px;
+}
+.doc-serv > a {
+    position: relative;
+    display: block;
+    line-height: 42px;
+    overflow: hidden;
+    border-bottom: 1px dashed #f3f3f3;
+}
+
+.doc-serv > a .item1 {
+    margin-right: 160px;
+}
+.doc-serv > a{ line-height: 42px; display: block; overflow: hidden; border-bottom: 1px dashed #f3f3f3; }
+
+.doc-serv > a:hover{ background: #fcfcfc; }
+.doc-serv > a:hover .item1{ color: #377bee; }
+.hos-serv .item1 {
+    width: 349px;
+}
+.hos-serv .item5 {
+    width: 85px;
+}
+.doc-serv span {
+    float: left;
+    color: #999;
+}
+.hos-serv .item2 {
+    width: 85px;
+}
+.hos-serv .item3 {
+    width: 105px;
+}
+
+.hos-serv .item4 {
+    width: 80px;
+}
+.hos-serv .item4 em{
+    color:#FF0036 ;
+    font-size: 14px;
+}
+.doc-serv .checkMore {
+    line-height: 42px;
+    text-align: right;
+}
+
+
+

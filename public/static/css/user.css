@@ -1,0 +1,182 @@
+@charset "UTF-8";
+
+/*
+* 用户中心样式
+* data 2017.10.16
+*/
+ul{
+    padding: 0px;
+}
+ul li{
+    text-decoration:none;
+}
+.userLeft, .userRight{
+padding: 0px;
+}
+.userLeft .userLeft-slide {
+    width: 100%;
+    padding-bottom: 68px;
+    border: 1px solid #e2e2e2;
+    background: #fafafa;
+}
+.userLeft-slide .slide-tit {
+    position: relative;
+    height: 54px;
+    margin-left: 20px;
+    padding-left: 11px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 54px;
+
+}
+.userLeft-slide .userLeft-list {
+    padding: 16px 0 10px 0;
+    border-top: 1px solid #e8e8e8;
+}
+.userLeft-slide .userLeft-list div {
+    padding: 0 0 11px 37px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 14px;
+
+}
+.userLeft-slide .userLeft-list ul a {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 29px;
+    padding-left: 49px;
+    line-height: 29px;
+
+}
+.userLeft-slide .userLeft-list ul a:before{
+    position: absolute;
+    top: 50%;
+    left: 37px;
+    width: 3px;
+    height: 3px;
+    margin-top: -1px;
+    content: '';
+    background: #dedede; }
+.userLeft-slide .userLeft-list ul a:after{
+    position: absolute;
+    top: 50%;
+    right: 37px;
+    width: 5px;
+    height: 8px;
+    margin-top: -4px;
+    content: '';
+    background: url('../images/personal-icon.png') no-repeat -357px 0; }
+.userLeft-slide .userLeft-list ul a:hover{
+    color: #fff;
+    background: #5ca945;
+    text-decoration-line: none;
+}
+.userLeft-slide .userLeft-list ul a:hover:before{
+    background: #fff;
+}
+
+.userRight-top {
+    height: 113px;
+    padding: 23px 19px 0 35px;
+    background: url('../images/home-bj.jpg') no-repeat;
+}
+.userRight-top .top-img {
+    display: block;
+    float: left;
+    width: 78px;
+    height: 78px;
+    margin-right: 21px;
+    padding: 2px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 2px 1px #e8e8e8;
+}
+.userRight-top .top-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.userRight-top .top-data {
+    float: left;
+    margin-top: 18px;
+}
+.userRight-top .top-data div {
+    font-size: 0;
+}
+.userRight-top .top-data div a {
+    margin-right: 8px;
+    font-size: 18px;
+    line-height: 18px;
+    vertical-align: top;
+    color: #333;
+}
+.userRight-top .top-data p {
+    overflow: hidden;
+    margin-top: 11px;
+    margin-left: -9px;
+    font-size: 0;
+    line-height: 14px;
+}
+.userRight-top .top-data p a {
+    position: relative;
+    display: inline-block;
+    height: 14px;
+    margin-left: -1px;
+    padding: 0 10px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #999;
+}
+.userRight-top .top-news {
+    float: right;
+    margin-top: 18px;
+    font-size: 0;
+}
+.userRight-top .top-news a {
+    position: relative;
+    display: inline-block;
+    padding: 0 22px;
+    color: #999;
+}
+.userRight-top .top-news .system span {
+    background-position: 0 -27px;
+}
+.userRight-top .top-news a span {
+    position: relative;
+    display: block;
+    width: 22px;
+    height: 32px;
+    margin: 0 auto;
+    background: url('../images/personal-icon.png') no-repeat;
+    background-position-x: 0%;
+    background-position-y: 0%;
+}
+.userRight-top .top-news a > i {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+}
+.userRight-top .top-news a {
+    position: relative;
+    display: inline-block;
+    padding: 0 22px;
+    color: #999;
+}
+.userRight-top .top-news .community span {
+    width: 28px;
+    background-position: -64px -27px;
+}
+.userRight-top .top-news a span {
+    position: relative;
+    display: block;
+    width: 22px;
+    height: 32px;
+    margin: 0 auto;
+    background: url('../images/personal-icon.png') no-repeat;
+    background-position-x: 0%;
+    background-position-y: 0%;
+}

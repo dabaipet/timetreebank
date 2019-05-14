@@ -1,0 +1,348 @@
+@charset "UTF-8";
+.bodyBg{
+    background: #f8f8f8;
+}
+ul li{
+    list-style-type:none;
+}
+/* 页面 页头style*/
+.container-fluid{
+    background: #fff;
+}
+.RegisterDoctorInfo {
+    margin: 0 auto;
+    padding: 30px 0;
+}
+.RegisterDoctorInfo .logo {
+    display: block;
+    float: left;
+    margin-top: 1px;
+    width: 76px;
+    height: 38px;
+    background: url("") no-repeat 0 -2px;
+}
+.RegisterDoctorInfo .logo-text {
+    float: left;
+    font-size: 14px;
+    color: #999;
+    line-height: 36px;
+    padding: 3px 0 0 46px;
+}
+.RegisterDoctorInfo .logo-text span {
+    font-size: 14px;
+}
+.RegisterDoctorInfo .logo-text .bor-l-r {
+    border-left: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8;
+    padding: 0 12px;
+    margin: 0 12px;
+}
+.RegisterDoctorInfo .logo-text b {
+    font-weight: normal;
+    color: #377bee;
+}
+.RegisterDoctorInfo .logo-text .last b {
+    padding-left: 7px;
+}
+.RegisterDoctorInfo .return-home {
+    float: right;
+    width: 128px;
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    font-size: 14px;
+    color: #666;
+    border-radius: 2px;
+}
+.RegisterDoctorInfo .return-home:hover {
+    color:#377bee;
+    border: 1px solid #377bee;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    transition: 0.5s ease;
+
+}
+/*页面左侧注册信息*/
+.RegisterDoctorLeft {
+    float: left;
+    background: #fff;
+    padding-bottom: 74px;
+
+}
+.RegisterDoctorLeft .tit {
+    height: 25px;
+    margin: 30px 0 40px 40px;
+    font-size: 24px;
+    line-height: 24px;
+    color: #1E9FFF;
+}
+.RegisterDoctorLeft .tit i {
+    padding-right: 10px;
+}
+.RegisterDoctorLeft .top {
+    height: 104px;
+    padding-left: 65px;
+}
+.RegisterDoctorLeft .top .top-img {
+    display: block;
+    float: left;
+    margin-right: 18px;
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    border: 1px solid #e3e3e3;
+}
+.RegisterDoctorLeft .top .img-right {
+    float: left;
+    padding-top: 41px;
+    width: 540px;
+}
+.RegisterDoctorLeft .top .upload-top {
+    height: 34px;
+}
+.RegisterDoctorLeft .top .upload-img {
+    position: relative;
+    width: 98px;
+    height: 34px;
+    border-radius: 2px;
+    overflow: hidden;
+    float: left;
+    margin-right: 15px;
+}
+.RegisterDoctorLeft .top .upload-img p {
+    height: 34px;
+    text-align: center;
+    line-height: 34px;
+    background: #5bc5e5;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+}
+.RegisterDoctorLeft .top .img-msg {
+    font-size: 14px;
+    line-height: 14px;
+    margin-top: 14px;
+    color: #bbb;
+}
+.RegisterDoctorLeft .register-btn{
+    display: block;
+    margin: 35px 0 0 170px;
+    width: 250px;
+    height: 50px;
+    font-family: "Microsoft YaHei";
+    font-size: 22px;
+    background: #5bc5e5;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.form-list li .input-box .radio-box label {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 38px;
+    line-height: 38px;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+}
+.RegisterDoctorLeft .form-list li .init-name {
+    float: left;
+    margin-right: 20px;
+    width: 150px;
+    line-height: 40px;
+    font-size: 18px;
+    color: #666;
+    text-align: right;
+}
+.RegisterDoctorLeft .form-list li .input-box {
+    float: left;
+    width: 340px;
+    height: 40px;
+}
+.RegisterDoctorLeft .form-list li .input-box input[type="text"] {
+    float: left;
+    width: 305px;
+    height: 20px;
+    font-size: 14px;
+    color: #bbb;
+    border: 1px solid #ddd;
+    padding: 9px 10px;
+    border-radius: 2px;
+    background: #fff;
+}
+.RegisterDoctorLeft .form-list li {
+    min-height: 40px;
+    margin-top: 28px;
+    overflow: hidden;
+}
+.RegisterDoctorLeft .form-list li .input-box .code-img {
+    float: left;
+    display: block;
+    width: 90px;
+    height: 36px;
+    margin-top: 2px;
+    margin-right: 15px;
+}
+.RegisterDoctorLeft .form-list li .code-box .get-code {
+    width: 103px;
+    height: 30px;
+    background: none;
+    border: none;
+    border-left-width: medium;
+    border-left-style: none;
+    border-left-color: currentcolor;
+    border-left: 1px solid #ddd;
+    font-size: 14px;
+    color: #5bc5e7;
+    margin-top: 4px;
+    cursor: pointer;
+}
+.RegisterDoctorRight {
+    float: left;
+    padding: 96px 0 0 21px;
+    width: 220px;
+}
+.register-step {
+    overflow: hidden;
+}
+.register-step .step-num {
+    width: 9px;
+    height: 139px;
+    background: url("../images/register-icons.png?v=6") no-repeat 0 -35px;
+    margin: 13px 17px 0 0;
+    float: left;
+}
+.register-step ul {
+    float: left;
+    padding-left: 6px;
+}
+.register-step ul li {
+    position: relative;
+    height: 35px;
+    margin-bottom: 30px;
+}
+.register-step ul .num1 i, .main-content .main-right .step-2 ul .num2 i, .main-content .main-right .step-3 ul .num2 i, .main-content .main-right .step-3 ul .num3 i {
+    background-position: -42px -35px;
+}
+ .register-step ul li i {
+    position: absolute;
+    left: -6px;
+    top: 12px;
+    display: block;
+    width: 6px;
+    height: 11px;
+    background: url("../images/register-icons.png?v=6") no-repeat -53px -35px;
+    background-position-x: -53px;
+    background-position-y: -35px;
+}
+.register-step ul .num1 p,  .step-2 ul .num2 p,  .step-3 ul .num2 p,  .step-3 ul .num3 p {
+    background: #d1eff9;
+    color: #666;
+}
+ .register-step ul li p {
+    width: 133px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    background: #e6e6e6;
+    font-size: 16px;
+    color: #999;
+    border-radius: 2px;
+}
+.help-tit {
+    border-top: 1px solid #e8e8e8;
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 12px;
+    padding-top: 25px;
+    color: #999;
+}
+.help-list {
+    padding-top: 17px;
+}
+.help-list li {
+    height: 14px;
+    line-height: 14px;
+    margin-bottom: 12px;
+    position: relative;
+    font-size: 12px;
+    color: #666;
+}
+.help-list li i{
+    padding-right: 10px;
+}
+
+/* 用户注册*/
+.bodyBgimg{
+    /*background: url('../images/member.jpg');
+    height:400px;
+    text-align: center;
+    line-height: 400px;
+    float: left;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);*/
+}
+.RegisterUser{
+
+}
+.User-findpassword{
+
+    width: 500px !important;
+
+}
+.RegisterUser .RegisterUser-login{
+    margin: 0 auto;
+    padding: 40px;
+    width: 726px;
+    min-height: 350px;
+    _height:350px;
+    background-color: #FFF;
+    box-shadow: 0 -15px 30px #F0F0F0;
+    border-radius: 5px;
+}
+.RegisterUser-login-right{
+    height: 238px;
+    border-left: 1px solid #e4e4e4;
+    padding-top:0px;
+    text-align: center;
+}
+.RegisterUser-login h2{
+    font-size: 18px;
+}
+.RegisterUser-login-right .RegisterUser-sdk{
+    margin-top: 15px;
+    border: 1px solid #e6e6e6;
+    padding:9px 20px;
+    background-color: #FBFBFB;
+    font-size: 14px;
+}
+.RegisterUser-login-right .RegisterUser-sdk a:hover{
+    text-decoration:none;
+}
+.RegisterUser-login-left .RegisterUser-tabRL{
+    text-align: center;
+    margin-bottom: 15px;
+}
+.RegisterUser-login-left .RegisterUser-tabRL a{
+    font-weight: 400;
+    font-size: 18px;
+    padding: 0 10px;
+}
+.RegisterUser-tabRL .onAction{
+    color: #377bee;
+}
+

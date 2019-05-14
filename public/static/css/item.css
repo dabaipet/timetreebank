@@ -1,0 +1,143 @@
+@charset "UTF-8";
+ul li{
+    list-style: none;
+}
+ul{
+    padding:0px;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+
+.ItemListLeft {
+    padding: 0 20px;
+    border: 1px solid #e8e8e8;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: rgb(232, 232, 232);
+    border-top: none;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+.ItemListLeft li {
+    display: block;
+    padding: 22px 0;
+    border-top: 1px solid #f3f3f3;
+    overflow: hidden;
+    margin-top: -1px;
+    cursor: pointer;
+}
+.ItemListLeft .listIimg {
+    position: relative;
+    margin-right: 20px;
+}
+.ItemListLeft .listIimg, .ItemListLeft .listIimg img {
+    width: 120px;
+    height: 120px;
+}
+.ItemListLeft .listInfo {
+    width: 400px;
+}
+.ItemListLeft .listInfo .listInfo-item2 {
+    font-size: 18px;
+    max-height: 48px;
+    line-height: 25px;
+    margin-top: -5px;
+}
+
+.ItemListLeft .listInfo .listInfo-item4 {
+    font-size: 12px;
+    color: #999;
+    line-height: 14px;
+    height: 14px;
+    padding-top: 8px;
+}
+.ItemListLeft .listInfo .listInfo-item4_2 {
+    padding-top: 5px;
+    height: 20px;
+}
+
+.ItemListLeft .listInfo .listInfo-item4 i {
+    color: #dedede;
+    padding: 0 5px;
+    background-position: 0 -1114px;
+}
+.taoWrap i {
+    font-style: normal;
+}
+.levbox {
+    position: relative;
+    top: 2px;
+    margin-left: 5px;
+    display: inline-block;
+    overflow: hidden;
+    height: 15px;
+    width: 81px;
+    background: #d7d7d7;
+}
+.ItemListLeft .listInfo .listInfo-item4 i {
+    color: #dedede;
+    padding: 0 5px;
+    background-position: 0 -1114px;
+}
+.levbox i {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    height: 15px;
+    width: 81px;
+    background: url("//icon.yuemei.com/front/tao_v1/images/tao_details.png") no-repeat scroll 0 -64px;
+    background-position-x: 0px;
+    background-position-y: -64px;
+    z-index: 2;
+}
+.ItemListLeft .listInfo .bot-lab {
+    padding-top: 12px;
+    overflow: hidden;
+}
+.ItemListLeft .contrast {
+    width: 200px;
+    height: 73px;
+    border-left: 1px solid #f3f3f3;
+    margin-top: 29px;
+}
+
+.ItemListLeft .contrast p {
+    margin-left: 22px;
+}
+.ItemListLeft .contrast .ymPrice {
+    font-size: 12px;
+    color: #999;
+    text-indent: -12px;
+}
+.contrast .ymPrice i {
+    padding-left: 10px;
+}
+.contrast .ymPrice .ft26 {
+    font-size: 26px;
+    font-family: Verdana;
+    letter-spacing: -2px;
+}
+.cpink {
+    color: #ff5370;
+}
+.contrast .hosPrice i {
+    text-decoration: line-through;
+    padding-left: 4px;
+}
+
+/*宝贝详情*/
+.breadcrumb {
+    float: left;
+    padding: 14px 0;
+    font-family: 'Microsoft Yahei';
+}
+.tree {
+    line-height: 42px;
+    color: #666;
+}
