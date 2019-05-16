@@ -16,7 +16,7 @@
 .sidelist dl.hover{width:210px; border-left:3px solid #5ca945;background-color: #fff; height: 151px; cursor: pointer; }
 .sidelist dl.nav0 dt {padding-left:8px; float:left;  line-height:26px;}
 .sidelist dl.nav0 dd {clear:both; height:21px; overflow:hidden; font-weight:normal;}
-.sidelist dl.nav0 dd a {float:left; font-size:12px; margin:0 5px; color:#f2efef;}
+.sidelist dl.nav0 dd a {float:left; font-size:13px; margin:0 5px; color:#f2efef;}
 
 .i-list {display:none; position:absolute; z-index:98; left:210px; top:2px; border-top: 3px solid #377bee; width:550px; height:453px; padding:10px 10px 15px 15px; color:#3c3c3c; font-size:12px; background:rgba(249,249,249,0.96); filter:Alpha(opacity=96); }
 .i-list2 {top:-148px;}
