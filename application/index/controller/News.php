@@ -1,15 +1,15 @@
 <?php
+/*
+ * 文章控制器
+ * */
+
 namespace app\index\controller;
 
-/*大白宠物 文章
- *
- * **/
 
 use think\Controller;
 use think\Request;
-use app\index\model\Article as ArticleModel;
 
-class Article extends Controller
+class News extends Controller
 {
 
 

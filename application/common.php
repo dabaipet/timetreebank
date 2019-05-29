@@ -1,16 +1,7 @@
 <?php
-// +----------------------------------------------------------------------
-// | ThinkPHP [ WE CAN DO IT JUST THINK ]
-// +----------------------------------------------------------------------
-// | Copyright (c) 2006-2016 http://thinkphp.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
-// +----------------------------------------------------------------------
-// | Author: 流年 <liu21st@gmail.com>
-// +----------------------------------------------------------------------
-
 // 应用公共文件
 // 返回Code代码
+
 function showReturnCode($code = '', $msg = '')
 {
     $CodeData = [
@@ -254,5 +245,66 @@ function xmlToArray($xml)
     //将XML转为array
     $array_data = json_decode(json_encode(simplexml_load_string($xml, 'SimpleXMLElement', LIBXML_NOCDATA)), true);
     return $array_data;
+}
+/**
+ * 发送请求
+ *
+ * @param string $url      请求地址
+ * @param array  $dataObj  请求内容
+ * @return string 应答json字符串
+ */
+function sendCurlPost($url, $dataObj)
+{
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_URL, $url);
+    curl_setopt($curl, CURLOPT_HEADER, 0);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($curl, CURLOPT_POST, 1);
+    curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 60);
+    curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($dataObj));
+    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+
+    $ret = curl_exec($curl);
+    if (false == $ret) {
+        // curl_exec failed
+        $result = "{ \"result\":" . -2 . ",\"errmsg\":\"" . curl_error($curl) . "\"}";
+    } else {
+        $rsp = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+        if (200 != $rsp) {
+            $result = "{ \"result\":" . -1 . ",\"errmsg\":\"". $rsp
+                . " " . curl_error($curl) ."\"}";
+        } else {
+            $result = $ret;
+        }
+    }
+
+    curl_close($curl);
+
+    return $result;
+}
+/*
+ *
+ * 网站设置：配置文件写入
+ * */
+function webset_write_static($cache_file_path, $config_arr)
+{
+    $content = "<?php\r\n";
+    $content .= "/**网站设置文件*/";
+    $content .= "\$data = " . var_export($config_arr, true) . ";\r\n";
+    $content .= "?>";
+    if (!file_put_contents($cache_file_path, $content, LOCK_EX))
+    {
+        $fp = @fopen($cache_file_path, 'wb+');
+        if (!$fp)
+        {
+            exit('生成缓存文件失败');
+        }
+        if (!@fwrite($fp, trim($content)))
+        {
+            exit('生成缓存文件失败');
+        }
+        @fclose($fp);
+    }
 }
 
