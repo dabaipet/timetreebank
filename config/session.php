@@ -17,9 +17,17 @@ return [
     // SESSION_ID的提交变量,解决flash上传跨域
     'var_session_id' => '',
     // SESSION 前缀
-    'prefix'         => 'think',
+    'prefix'=>  'tree',
     // 驱动方式 支持redis memcache memcached
-    'type'           => '',
+    'type'           => 'redis',
     // 是否自动开启 SESSION
-    'auto_start'     => true,
+    'auto_start'     => false,
+    // redis主机
+    'host'       => '140.143.193.104',
+    // redis端口
+    'port'       => 6379,
+    // 密码
+    'password'   => ';3eh0$=aj?.cz//8hVdgr%^$',
+    // 全局缓存有效期（0为永久有效）
+    'expire'=>  2678400,
 ];
