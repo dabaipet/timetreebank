@@ -1,4 +1,6 @@
 <?php
+namespace app\index\controller;
+
 /*
  * 用户中心
  * @ index
@@ -13,8 +15,6 @@
  * @ mySafe
  * @ myPassword
  * */
-namespace app\index\controller;
-
 use think\Controller;
 class User extends  Controller
 {

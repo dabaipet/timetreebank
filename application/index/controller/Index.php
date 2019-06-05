@@ -13,7 +13,7 @@ class Index extends Base
     public function index()
     {
 
-        echo dirname(dirname(dirname(__FILE__))).'\webset'.'.php';
+       // echo dirname(dirname(dirname(__FILE__))).'\webset'.'.php';
         return $this->fetch("index");
     }
 

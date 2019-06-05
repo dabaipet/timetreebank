@@ -1,7 +1,7 @@
 <?php
 /**
  * API 路由.
- * User: max
+ * User:
  * Date: 2018/11/8
  * Time: 17:21
  */
@@ -11,9 +11,12 @@ Route::bind('index');
 Route::domain('www', function () {
     //首页
     Route::rule('/', 'index');
-    //注册登录
+    //登录
     Route::rule('signin', 'signin/index','GET|POST');
     Route::rule('signin-choice', 'signin/choice','GET|POST');
+    //注册
+    Route::rule('signup-user', 'signup/user','GET|POST');
+    Route::rule('signup-org', 'signup/org','GET|POST');
     //用户信息
     Route::rule('user', 'user/index','GET|POST');
     Route::rule('user-info', 'user/info','GET|POST');
