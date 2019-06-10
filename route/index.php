@@ -25,8 +25,12 @@ Route::domain('www', function () {
     Route::rule('user-real-name', 'user/realName','GET|POST');
     Route::rule('user-choice', 'user/choice','GET|POST');
     Route::rule('user-choice', 'user/choice','GET|POST');
-    //钱包
-    Route::rule('wallet', 'wallet/index','GET|POST');
-    Route::get(':c/:a', 'api/:c/:a');
+    //文章资讯
+    Route::rule('news', 'News/index','GET|POST');
+    Route::rule('news/:idd', 'News/read','GET|POST');
+    //服务分类
+    Route::rule('classify', 'classify/index','GET|POST');
+    Route::rule('classify/:cid/:', 'classify/read','GET|POST');
+    //Route::get(':c/:a', 'api/:c/:a');
     //Route::rule('worker', 'worker/onMessage','GET|POST');
 });
