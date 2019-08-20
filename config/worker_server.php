@@ -19,7 +19,7 @@ return [
     'port'           => 2345, // 监听端口
     'socket'         => '', // 完整监听地址
     'context'        => [], // socket 上下文选项
-    'worker_class'   => 'app\api\http\Worker', // 自定义Workerman服务类名
+    'worker_class'   => ['app\http\Workertest'], // 自定义Workerman服务类名
 
     // 支持workerman的所有配置参数
     'name'           => 'thinkphp',

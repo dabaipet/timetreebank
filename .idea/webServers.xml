@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b2aee9a6-e160-47d2-9036-b6173db62747" name="swoole_timetree" url="http://140.143.193.104">
+        <fileTransfer host="140.143.193.104" port="21" rootFolder="/www/wwwroot/swoole_timetree">
+          <advancedOptions>
+            <advancedOptions controlEncoding="UTF8" dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
