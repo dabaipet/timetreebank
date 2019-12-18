@@ -35,8 +35,8 @@ class Alisms
     public static function getAcsClient() {
         $product = "Dysmsapi";
         $domain = "dysmsapi.aliyuncs.com";
-        $accessKeyId = "LTAIV327oU2DHwzt"; // AccessKeyId
-        $accessKeySecret = "AM57cIQzFG8F10xTlStcP5o81cfBrB"; // AccessKeySecret
+        $accessKeyId = ""; // AccessKeyId
+        $accessKeySecret = ""; // AccessKeySecret
         // 暂时不支持多Region
         $region = "cn-beijing";
         // 服务结点
